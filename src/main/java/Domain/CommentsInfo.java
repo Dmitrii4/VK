@@ -3,6 +3,7 @@ package Domain;
 public class CommentsInfo {
     private int id;
     private int postId;
+    private boolean interesting; // флаг для того чтобы отображать в выборке "Сначала интересные"
     private int userId;
     private String userAvatar;
     private String comment;
@@ -90,5 +91,13 @@ public class CommentsInfo {
 
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
+    }
+
+    public boolean isInteresting() {
+        return interesting;
+    }
+
+    public void setInteresting(boolean interesting) {
+        this.interesting = interesting;
     }
 }
